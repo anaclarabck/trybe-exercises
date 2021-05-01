@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Currículo</title>
+  </head>
+
+  <body>
+    <header id='header'>
+      <h1 id='title'>Formulário para criação de currículo</h1>
+      <p id='funcionamento'></p>
+    </header>
+
+    <main>
+      <form>
+        <fieldset>
+          <h2>Dados pessoais</h2>
+          <label class='container-row'>Nome:
+            <input type='text' maxlength='40' class='dados' name='nome' required>
+          </label>
+          <br>
+          <label class='container-row'>E-mail:
+            <input type='text' maxlength="50" class='dados' name='e-mail' required>
+          </label>
+          <br>
+          <label class='container-row'>CPF:
+            <input type='text' maxlength="11" minlength="11" class='dados' name='CPF' required>
+          </label>
+          <br>
+          <label class='container-row'>Endereço:
+            <input type='text' maxlength="200" class='dados' name='endereco' required>
+          </label>
+          <br>
+          <label class='container-row'>Cidade:
+            <input type='text' maxlength="28" class='dados' name='cidade' required>
+          </label>
+          <br>
+          <label class='container-row'>Estado:
+            <select name='estado' id='relacao-estados' class='dados' name='estado'>
+            </select>
+          </label>
+          <br>
+          <label class='container-row' class='dados' name='tipo' >Tipo:
+            <input type="radio" name='tipo' required>Casa
+            <input type="radio" name='tipo' required>Apartamento
+          </label> 
+          <br>
+        </fieldset>
+        <fieldset>
+          <h2>Dados do seu último emprego</h2>
+          <label class='container-row'>Resumo do currículo:
+            <textarea cols="100" rows="5" maxlength="1000" class='dados' name='resumo-curriculo' required></textarea>
+          </label>
+          <br>
+          <label class='container-row'>Cargo:
+            <input type='text' maxlength="40" class='dados' name='cargo' required>
+          </label>
+          <br>
+          <label class='container-row'>Descrição do cargo:<br>
+            <input type='text' maxlength="500" class='dados' name='descricao-cargo' required>
+          </label>
+          <br>
+          <label class='container-row'>Data de início:
+            <input type="text" id='data-de-inicio' class='dados' name='data-inicio' required>
+          </label>
+        </fieldset>
+        <button id='enviar-formulario' type='submit'>Enviar</button>
+        <button id='limpar-formulario' type='reset'>Limpar</button>
+      </form>
+      <div id='resumo'>
+
+      </div>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type='text/javascript' src='script.js'></script>
+  </body>
+</html>

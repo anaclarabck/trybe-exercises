@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <meta content="width=device-width">
+    <link rel='stylesheet' type='text/css' href='bootstrap-5.0.0-beta3-dist/css/bootstrap.css'>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+    <script src="dist/js/DatePickerX.min.js"></script>
+    <title>Currículo</title>
+  </head>
+
+  <body>
+    <header id='header'>
+      <h1 id='title' style='text-align: center'>Formulário para criação de currículo</h1>
+      <p id='funcionamento'></p>
+    </header>
+
+    <main>
+      <form>
+        <fieldset class='container border border-2 p-2 bg-light border'>
+          <h2 class='h3'>Dados pessoais</h2>
+
+          <div class='mb-3'>
+            <label class='form-label'>Nome:</label>
+            <input type='text' maxlength='40' class='dados form-control' name='nome' required>
+          </div>
+
+          <div class='mb-3'>
+            <label class='form-label'>E-mail:</label>
+            <input type='text' maxlength="50" class='dados form-control' name='e-mail' required>
+          </div>
+
+          <div class='mb-3'>
+            <label class='form-label'>CPF:</label>
+            <input type='text' maxlength="11" minlength="11" class='dados form-control' name='CPF' required>
+          </div>
+
+          <div class='mb-3'>
+            <label class='form-label'>Endereço:</label>
+            <input type='text' maxlength="200" class='dados form-control' name='endereco' required>
+          </div>
+          
+          <div class='mb-3'>
+            <label class='form-label'>Cidade:</label>
+            <input type='text' maxlength="28" class='dados form-control' name='cidade' required>
+          </div>
+
+          <div class='mb-3'>
+            <select name='estado' id='relacao-estados' class='dados form-select' name='estado' required>
+              <option selected>Estado</option>
+            </select>           
+          </div>
+
+          <div class='mb-3'>
+            <label class='form-label'>Tipo:</label>
+            <div class='form-check'>
+              <input type="radio" class='form-check-input' name='tipo' required>
+              <label class='dados form-check-lavel' name='tipo'>Casa</label>  
+            </div>
+  
+            <div class='form-check'>
+              <input type="radio" class='form-check-input' name='tipo' required>
+              <label class='dados form-check-lavel' name='tipo'>Apartamento</label> 
+            </div>
+          </div>
+
+        </fieldset>
+        <br>
+  
+        <fieldset class='container border border-2 p-2 bg-light border'>
+          <h2 class='h3'>Dados do seu último emprego</h2>
+          <div class='mb-3'>
+            <label class='form-label'>Resumo do currículo:</label>
+            <textarea cols="100" rows="5" maxlength="1000" class='dados form-control' name='resumo-curriculo' required></textarea>
+          </div>
+          
+          <div class='mb-3'>
+            <label class='form-label'>Cargo:</label>
+            <input type='text' maxlength="40" class='dados form-control' name='cargo' required>
+          </div>
+          
+          <div class='mb-3'>
+            <label class='form-label'>Descrição do cargo:</label>
+            <input type='text' maxlength="500" class='dados form-control' name='descricao-cargo' required>
+          </div>
+          
+          <div class='mb-3'>
+            <label class='form-label'>Data de início:</label>
+            <input type="text" id='myInputId' class='dados form-control' name='data-inicio' placeholder='mm/dd/aaaa' required>
+          </div>
+
+          
+        </fieldset>
+        <br>
+        <div class='container'>
+          <button id='enviar-formulario' type='submit' class="btn btn-primary">Enviar</button>
+          <button id='limpar-formulario' type='reset' class="btn btn-primary">Limpar</button>
+        </div>
+      </form>
+
+      <div id='resumo' class='container'>
+        <br>
+
+      </div>
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script type='text/javascript' src='script.js'></script>
+  </body>
+</html>
