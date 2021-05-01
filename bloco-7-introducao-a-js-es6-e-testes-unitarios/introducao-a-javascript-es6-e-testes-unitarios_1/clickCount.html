@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <title>ClickCount</title>
+  </head>
+
+  <body>
+    <header id='header'>
+      <h1 id='title'></h1>
+    </header>
+
+    <main>
+      <div id='button-container'>
+        <p id='show-counter'></p>
+        <button id='click-count'>Conte quantos cliques foram dados aqui</button>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script type='text/javascript'>
+    const showCounter = document.getElementById('show-counter')
+    let counter = 0
+    showCounter.innerHTML = counter;
+
+    const countClicks = event => showCounter.innerHTML = (counter += 1); 
+
+    const countClicks2 = event => {
+      // counter += 1
+      // showCounter.innerHTML = counter;
+      showCounter.innerHTML = (counter += 1);
+    }
+   
+    document.getElementById('click-count').addEventListener('click', countClicks); 
+    </script>
+  </body>
+</html>
