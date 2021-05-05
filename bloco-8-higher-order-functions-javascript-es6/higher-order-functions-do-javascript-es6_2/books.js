@@ -112,13 +112,34 @@ function booksOrderedByReleaseYearDesc() {
 
 // Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário. 
 function everyoneWasBornOnSecXX() {
-  const verifyOnCenXX = books.every( (element) => element.author.birthYear > 1900 && element.author.birthYear < 2000)
+  const verifyOnCenXX = books.every((element) => element.author.birthYear > 1900 && element.author.birthYear < 2000)
   return verifyOnCenXX
 }
 
 // Faça uma função que retorne true , se algum livro foi lançado na década de 80, e false , caso contrário. 
 function someBookWasReleaseOnThe80s() {
-  return books.some( (element) => 1980 <= element.releaseYear < 1990)
+  return books.some((element) => 1980 <= element.releaseYear < 1990)
+}
+
+// Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário. 
+
+function authorUnique() {
+  let arrayBookReleaseYear = []
+  books.forEach((element) => arrayBookReleaseYear.push(element.author.birthYear));
+  arrayBookReleaseYear.sort((a, b) => a - b)
+  return arrayBookReleaseYear.every((element, index) => arrayBookReleaseYear[index] !== arrayBookReleaseYear[index + 1])
+}
+
+function authorUnique0() {
+  let arrayBookReleaseYear = []
+  books.forEach((element) => arrayBookReleaseYear.push(element.author.birthYear));
+  arrayBookReleaseYear.sort((a, b) => a - b)
+  for (let index = 1; index < books.length; index += 1) {
+    if (arrayBookReleaseYear[index - 1] === arrayBookReleaseYear[index]) {
+      return false
+    }
+  }
+  return true
 }
 
 assert.strictEqual(authorBornIn1947(books), 'Stephen King');
@@ -127,3 +148,4 @@ assert.deepStrictEqual(getNamedBook(), 'As Crônicas de Gelo e Fogo');
 // assert.deepStrictEqual(booksOrderedByReleaseYearDesc(), expectedResult);
 assert.strictEqual(everyoneWasBornOnSecXX(), false);
 assert.strictEqual(someBookWasReleaseOnThe80s(), true);
+assert.strictEqual(authorUnique(), false);
