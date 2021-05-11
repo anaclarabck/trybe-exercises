@@ -10,7 +10,7 @@ const temperatureInFahrenheit = (temperature) => console.log(`It is currently ${
 const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
 const sendMarsTemperature = (callback) => {
-  callback(getMarsTemperature());
+  setTimeout(() => callback(getMarsTemperature()), messageDelay());
 }
 
 
