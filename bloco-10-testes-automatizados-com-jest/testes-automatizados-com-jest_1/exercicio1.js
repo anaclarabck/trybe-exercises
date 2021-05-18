@@ -65,3 +65,5 @@ module.exports = {
   obj2,
   obj3,
 }
+
+console.log(myRemove([1, 2, 3, 4], 3));
