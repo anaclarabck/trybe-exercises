@@ -39,14 +39,26 @@ function techList(arrayTech, name) {
   if (arrayTech.length === 0) {
     return 'Vazio!';
   }
-  let techWithName = []
+  let techWithName = [];
   arrayTech.sort().forEach((tech) => techWithName.push({ tech, name }));
   return techWithName;
-}
+};
+
+
+function hydrate(drinks) {
+  const arrayDrinks = drinks.split(' ');
+  const cupsOfDrinks = arrayDrinks.filter((element) => Number(element) > 0);
+  const cupsOfWater = cupsOfDrinks.reduce((totalCups, cups) => totalCups + Number(cups), 0);
+
+  const answer = cupsOfWater > 1 ? `${cupsOfWater} copos de água` : `${cupsOfWater} copo de água`
+
+  return answer;
+};
 
 module.exports = {
   translator,
   encode,
   decode,
-  techList
+  techList,
+  hydrate
 }
