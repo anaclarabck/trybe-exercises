@@ -66,4 +66,4 @@ module.exports = {
   obj3,
 }
 
-console.log(myRemove([1, 2, 3, 4], 3));
+console.log(myRemoveWithoutCopy([1, 2, 3, 4], 3));
