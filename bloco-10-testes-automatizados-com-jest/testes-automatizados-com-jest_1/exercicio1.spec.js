@@ -1,5 +1,5 @@
 // const { describe, expect, it } = require('@jest/globals');
-const { sum, myRemove, myRemoveWithoutCopy, myFizzBuzz } = require('./exercicio1')
+const { sum, myRemove, myRemoveWithoutCopy, myFizzBuzz, obj1, obj2, obj3 } = require('./exercicio1')
 
 // myRemove, myRemoveWithoutCopy, myFizzBuzz, obj1, obj2, obj3
 
@@ -63,5 +63,13 @@ describe('Testes do exercício 4', () => {
   });
   it('Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado', () => {
     expect(myFizzBuzz('hi')).toBeFalsy();
+  });
+})
+
+describe('Testes do exercício 5', () => {
+  it('Compare dois objetos (JSON) para verificar se são idênticos ou não', () => {
+    expect(obj1).toEqual(obj2);
+    expect(obj1).not.toEqual(obj3);
+    expect(obj2).not.toEqual(obj3);
   });
 })
