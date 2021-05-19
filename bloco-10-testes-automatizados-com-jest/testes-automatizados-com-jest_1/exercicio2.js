@@ -36,9 +36,12 @@ function decode(sentence) {
 // Implemente a função techList a partir dos testes abaixo. Experimente refatorar a função que você criou para esse projeto! É importante nunca alterar os testes ou as variáveis já escritas no código . 
 
 function techList(arrayTech, name) {
-  if (!arrayTech) {
+  if (arrayTech.length === 0) {
     return 'Vazio!';
   }
+  let techWithName = []
+  arrayTech.sort().forEach((tech) => techWithName.push({ tech, name }));
+  return techWithName;
 }
 
 module.exports = {
