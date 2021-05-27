@@ -1,0 +1,56 @@
+body {
+  background-color: whitesmoke;
+}
+
+.App {
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  float: left;
+  margin-right: -100%;
+  width: 85.49%;
+  margin-left: 7.2525%
+}
+
+.poke-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 45%;
+  align-self: stretch;
+  border-color:grey;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  top: 0.05px; 
+  left: 0px; 
+  margin: 5px;
+}
+
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10px;
+  width: 170px;  
+}
+
+@media screen and (max-width: 350px) {
+  .poke-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 100%;
+    align-self: stretch;
+    border-color:grey;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    height: 200px;
+    top: 0.05px; 
+    left: 0px; 
+    margin: 5px;
+  }
+}
